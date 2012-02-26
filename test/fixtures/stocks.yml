@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  cost: 1
+  purchase_date: 1
+  total_purchase_cost: 1
+  sell_price: 1
+  sell_date: 1
+  total_sell_price: 1
+  profit_loss: 1
+
+two:
+  name: MyString
+  cost: 1
+  purchase_date: 1
+  total_purchase_cost: 1
+  sell_price: 1
+  sell_date: 1
+  total_sell_price: 1
+  profit_loss: 1

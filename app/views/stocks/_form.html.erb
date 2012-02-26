@@ -1,0 +1,58 @@
+<%= form_for(@stock) do |f| %>
+  <% if @stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock.errors.count, "error") %> prohibited this stock from being saved:</h2>
+
+      <ul>
+      <% @stock.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name,{:required => true} %>
+  </div>
+  <div class="field">
+    <%= f.label :cost %><br />
+    <%= f.number_field :cost,{:required => true} %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_date %><br />
+    <%= f.number_field :purchase_date,{:required => true} %>
+  </div>
+  <div class="field">
+    <%= f.label :purchase_quantity %><br />
+    <%= f.number_field :purchase_quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :sell_price %><br />
+    <%= f.number_field :sell_price %>
+  </div>
+  <div class="field">
+    <%= f.label :sell_date %><br />
+    <%= f.number_field :sell_date %>
+  </div>
+  <div class="field">
+    <%= f.label :sell_quantity %><br />
+    <%= f.number_field :sell_quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :profit_loss %><br />
+    <%= f.number_field :profit_loss %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script>
+$(function() {
+    $("#stock_purchase_date").datepicker();
+});
+$(function() {
+    $("#stock_sell_date").datepicker();
+});
+</script>
