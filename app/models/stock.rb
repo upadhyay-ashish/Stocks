@@ -4,7 +4,7 @@ class Stock < ActiveRecord::Base
     all_stocks = Stock.all
     count1 = count2 = count3 = count4 = count5 = count6 = count7 = count8 = count9 = count10 =0
     sum1 = sum2 = sum3 = sum4 = sum5 = sum6 = sum7 = sum8 = sum9 = sum10 = 0
-    average1 = average2 = average3 = average4 = average5 = average6 = average7 = average8 = average9 = average10s = 0
+    average1 = average2 = average3 = average4 = average5 = average6 = average7 = average8 = average9 = average10 = 0
     all_stocks.each do |stock|
       case
       when( stock.cost > 0 and stock.cost < 100)
@@ -51,7 +51,7 @@ class Stock < ActiveRecord::Base
     average10 = (sum10/count10.to_i) unless count10 == 0
 
     count_in_strings = count10.to_s + "," + count9.to_s + "," + count8.to_s + "," + count7.to_s + "," + count6.to_s + "," + count5.to_s + "," + count4.to_s + "," + count3.to_s + "," + count2.to_s + "," + count1.to_s
-    average_in_strings = average10.to_s + "," + average9.to_s + "," + average8.to_s + "," + average7.to_s + "," + average6.to_s + "," + average5.to_s + "," + average4.to_s + "," + average3.to_s + "," + average2.to_s + "," + average6.to_s
+    average_in_strings = average10.to_s + "," + average9.to_s + "," + average8.to_s + "," + average7.to_s + "," + average6.to_s + "," + average5.to_s + "," + average4.to_s + "," + average3.to_s + "," + average2.to_s + "," + average1.to_s
     values = {}
     values[:range] =  count_in_strings
     values[:average] =  average_in_strings
