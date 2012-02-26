@@ -6,9 +6,7 @@
 <html>
 <head>
  <script>
-	$(function(){
-		$("#tabs").tabs();
-	});
+
 </script>
 </head>
 <body>
@@ -22,11 +20,11 @@
 		<%= render :partial => 'datatable' %>
 	</div>
 	<div id="tabs-2">
-		JQgrid Coming soon
+		<%= render :partial => 'jqgrid' %>
 	</div>
 	<div id="tabs-3">
 		Highcharts Coming soon
 	</div>
-</div>----tabs closed
+</div>!----tabs closed
 </body>
 </html>
