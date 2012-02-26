@@ -8,7 +8,14 @@
 jQuery("#table-jqgrid").jqGrid({
 	datatype: "local",
  	height: 250,
-	width: 800,
+	width: 900,
+        rowNum:3,
+        rowList:[2,4,8],
+        sortname: 'cost',
+        viewrecords: true,
+        sortorder: "desc",
+        loadonce: true,
+        caption: "Stocks Details",
 	colNames:['Name','Cost', 'Purchase Date', 'Purchase Quantity','Purchase Cost'],
 	colModel:[
 		{name:'name',index:'name', width:100},

@@ -1,9 +1,9 @@
-require 'securerandom'
+
 
 class AddDummyDataToStocks < ActiveRecord::Migration
   def self.up
-    200.times do |i|
-      Stock.create(:name => string_random(4+rand(10)), :cost => rand(1000.12), :purchase_date => time_rand, :purchase_quantity => rand(5000))
+    500.times do |i|
+      Stock.create(:name => string_random(rand(6)+4), :cost => rand(1000.12), :purchase_date => time_rand, :purchase_quantity => rand(5000))
     end
   end
 
@@ -16,7 +16,7 @@ class AddDummyDataToStocks < ActiveRecord::Migration
   end
 
   def string_random( len )
-    chars = ("a".."z").to_a + ("A".."Z").to_a + ("0".."9").to_a
+    chars = ("a".."z").to_a + ("A".."Z").to_a 
     newpass = ""
     1.upto(len) { |i| newpass << chars[rand(chars.size-1)] }
     return newpass

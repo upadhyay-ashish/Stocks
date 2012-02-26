@@ -4,7 +4,8 @@ class StocksController < ApplicationController
   def index
     if user_signed_in?
       @stocks = Stock.all
-
+      @range_and_average = Stock.calculate_average_price_range_count
+      
       respond_to do |format|
         format.html # index.html.erb
         format.json { render :json => @stocks }
