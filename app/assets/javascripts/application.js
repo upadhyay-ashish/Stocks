@@ -17,9 +17,10 @@
 $(document).ready(function() {
 	$('#table').dataTable({
 		"bJQueryUI": true,
-		"sPaginationType": "full_numbers",
-		"sDom": '<"H"Tfr>t<"F"ip>'
+                "sPaginationType": "full_numbers"
 		});
 
 	$("#tabs").tabs();
+        $("#stock_purchase_date").datepicker();
+        $("#stock_sell_date").datepicker();
 });

@@ -13,25 +13,23 @@
     <th>Profit Loss</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 </thead>
 <tbody>
 	<% @stocks.each do |stock| %>
   <tr>
-    <td><%= stock.name %></td>
+    <td><%= link_to "#{stock.name}", stock,{:class => "link-a"} %></td>
     <td><%= stock.cost %></td>
     <td><%= stock.purchase_date %></td>
     <td><%= stock.purchase_quantity %></td>
-    <td><%#= (stock.purchase_quantity * stock.cost)%></td>
+    <td><%= (stock.purchase_quantity * stock.cost) if(stock.cost and stock.purchase_quantity) %></td>
     <td><%= stock.sell_price %></td>
     <td><%= stock.sell_date %></td>
     <td><%= stock.sell_quantity %></td>
     <td><%#= (stock.sell_quantity * stock.sell_price) if stock.sell_price %></td>
     <td><%= stock.profit_loss %></td>
-    <td><%= link_to "Show", stock %></td>
-    <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
-    <td><%= link_to 'Destroy', stock, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to "Edit", edit_stock_path(stock) %></td>
+    <td><%= link_to "Delete", stock, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 	<% end %>
 </tbody>

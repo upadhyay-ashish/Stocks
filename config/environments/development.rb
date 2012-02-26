@@ -34,4 +34,11 @@ Stocks::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  #devise mail config
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #On config/application.rb forcing your application to not access the DB or load models when precompiling your assets.
+  config.assets.initialize_on_precompile = false
+
 end

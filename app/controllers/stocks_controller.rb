@@ -2,11 +2,13 @@ class StocksController < ApplicationController
   # GET /stocks
   # GET /stocks.json
   def index
-    @stocks = Stock.all
+    if user_signed_in?
+      @stocks = Stock.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @stocks }
+      respond_to do |format|
+        format.html # index.html.erb
+        format.json { render :json => @stocks }
+      end
     end
   end
 

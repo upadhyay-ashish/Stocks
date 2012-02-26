@@ -22,5 +22,6 @@ $(document).ready(function() {
 		});
 
 	$("#tabs").tabs();
-	$("#table-jqgrid").jqGrid();
+        $("#stock_purchase_date").datepicker();
+        $("#stock_sell_date").datepicker();
 });
