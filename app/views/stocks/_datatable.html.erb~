@@ -1,0 +1,41 @@
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="table" width="100%">
+
+	<thead>
+		  <tr>
+    <th>Name</th>
+    <th>Cost</th>
+    <th>Purchase Date</th>
+    <th>Purchase Quantity</th>
+    <th>Purchase Cost</th>
+    <th>Sell Price</th>
+    <th>Sell Date</th>
+    <th>Sell Quantity</th>
+    <th>Sell Cost</th>
+    <th>Profit Loss</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+	</thead>
+	<tbody>
+
+	<% @stocks.each do |stock| %>
+  <tr>
+    <td><%= stock.name %></td>
+    <td><%= stock.cost %></td>
+    <td><%= stock.purchase_date %></td>
+    <td><%= stock.purchase_quantity %></td>
+    <td><%#= (stock.purchase_quantity * stock.cost)%></td>
+    <td><%= stock.sell_price %></td>
+    <td><%= stock.sell_date %></td>
+    <td><%= stock.sell_quantity %></td>
+    <td><%#= (stock.sell_quantity * stock.sell_price) if stock.sell_price %></td>
+    <td><%= stock.profit_loss %></td>
+    <td><%= link_to "Show", stock %></td>
+    <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
+    <td><%= link_to 'Destroy', stock, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+	</tbody>
+	</tfoot>
+</table>

@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require_tree .
 
-$(document).ready(function() {
+	$(document).ready(function() {
 	$('#table').dataTable({
 		"bJQueryUI": true,
 		"sPaginationType": "full_numbers",
@@ -23,4 +23,4 @@ $(document).ready(function() {
 
 	$("#tabs").tabs();
 
-});
+	} );
